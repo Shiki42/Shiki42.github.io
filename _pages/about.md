@@ -17,6 +17,7 @@ news: true # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
+
 I am currently looking for PhD position in Embodied AI / Robotic Learning. Recently, I am interested in how to learn a generalized 3D representation for manipulation tasks.
 
 I received my master's degree from the University of Southern California and my bachelor's degree from the University of Leeds. During my master's study, I worked on enhancing the interpretability of computer vision models using graph structures with Dr.Yunhao Ge. During my undergraduate study, I researched explainable natural language processing with Prof. Fei Teng.
