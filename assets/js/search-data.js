@@ -368,7 +368,7 @@ ninja.data = [{
           title: 'A long announcement with details',
           description: "",
           section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
+              window.location.href = "/news/temp/";
             },},{id: "news-i-graduated-from-the-university-of-southern-california",
           title: 'I graduated from the University of Southern California! 🎉',
           description: "",
