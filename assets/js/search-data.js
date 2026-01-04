@@ -361,16 +361,11 @@ ninja.data = [{
           window.location.href = "/blog/2015/formatting-and-links/";
         
       },
-    },{id: "news-i-joined-shenzhen-institute-of-artificial-intelligence-and-robotics-for-society-where-i-m-very-fortunate-to-be-advised-by-dr-tianwei-zhang",
-          title: 'I joined Shenzhen Institute of Artificial Intelligence and Robotics for Society, where I’m...',
-          description: "",
-          section: "News",},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/temp/";
-            },},{id: "news-i-graduated-from-the-university-of-southern-california",
+    },{id: "news-i-graduated-from-the-university-of-southern-california",
           title: 'I graduated from the University of Southern California! 🎉',
+          description: "",
+          section: "News",},{id: "news-i-joined-shenzhen-institute-of-artificial-intelligence-and-robotics-for-society-where-i-m-very-fortunate-to-be-advised-by-dr-tianwei-zhang",
+          title: 'I joined Shenzhen Institute of Artificial Intelligence and Robotics for Society, where I’m...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
