@@ -7,7 +7,6 @@ related_posts: false
 
 I joined Shenzhen AIRS (Shenzhen Institute of Artificial Intelligence and Robotics for Society), where I’m very fortunate to be advised by <a href="http://zhangtianwei.info/">Dr. Tianwei Zhang</a>.
 
-
 <!-- ---
 layout: post
 title: A long announcement with details

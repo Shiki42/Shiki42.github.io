@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper *LLM-Grounded Dynamic Task Planning with Hierarchical Temporal Logic for Human-Aware Multi-Robot Handover* was accepted to IROS 2026.
+My paper _LLM-Grounded Dynamic Task Planning with Hierarchical Temporal Logic for Human-Aware Multi-Robot Handover_ was accepted to IROS 2026.
