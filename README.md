@@ -12,13 +12,13 @@ Open `http://127.0.0.1:4173`.
 
 ## Edit
 
-- `index.html`: quotation, biography, research questions, five publications, two open-source projects, news, and contact details.
+- `index.html`: quotation, biography, research questions, two selected publications, two open-source projects, three additional publications, news, and contact details.
 - `assets/css/site.css`: typography, responsive layout, and color, fog, grain, and motion variables in `:root`.
 - `assets/js/site.js`: mobile navigation, quiet reveals, capped background displacement, and the fixed pause control.
 - `assets/bibliography/publications.bib`: the five researcher publication entries.
 - `DESIGN.md`: visual system and reading structure.
 
-All original researcher photographs, publication figures, and research PDFs are preserved. Display figures use exact lossless WebP. The original Evo-RLT rollout GIF is linked from a static preview, so it does not introduce uncontrolled movement. Fonts are self-hosted with their SIL Open Font Licenses.
+All original researcher photographs, publication figures, and research PDFs are preserved. Display figures use exact lossless WebP. The original Evo-RLT rollout GIF is linked from a static preview, so it does not introduce uncontrolled movement. Fonts are self-hosted with their SIL Open Font Licenses. The Chinese name uses a three-character Noto Serif SC subset. The portrait uses the supplied skiing photograph; personal interests open through a native disclosure link.
 
 The forest and three fog layers continue throughout the page. Reduced-motion mode keeps the static photograph and mist, disables movement and scrolling effects, and immediately shows all content. The pause control also freezes decorative motion. Body text and scientific figures are never blurred.
 

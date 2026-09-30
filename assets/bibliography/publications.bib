@@ -4,11 +4,10 @@
   author={Hu, Shuyuan and Wu, Deng-Ke and Jin, Yifan and Luo, Qianhang and Ju, Mingchen and Ye, Kai and Zhao, Bo},
   year={2026},
   selected={true},
-  highlight={true},
   preview={ctr.png},
   pdf={CTR_ICLR2027.pdf},
   note={Submitted to ICLR 2027.},
-  abstract={Constraint-preserving Temporal Recombination (CTR) broadens the schedules seen during bimanual imitation learning while preserving recorded arm-local behavior and task-required cross-arm constraints. Evaluations with Diffusion Policy, ACT, and pi0.5 on simulated and real-robot tasks show reduced spurious cross-arm coupling while retaining necessary coordination.}
+  abstract={A bimanual demonstration specifies both what the robot should do and one particular schedule for when each arm should act. Standard imitation learning does not distinguish task-required cross-arm constraints from incidental scheduling choices, and may therefore exploit opposite-arm progress as a shortcut cue, creating spurious cross-arm coupling even where relative timing is irrelevant for the current task phase. We introduce Constraint-preserving Temporal Recombination (CTR), a training-time data intervention that preserves recorded arm-local sensorimotor content while retiming the corresponding segments to realize admissible schedules that preserve task-required cross-arm constraints. We use CTR to train Diffusion Policy, Action Chunking with Transformers, and π0.5, and evaluate them on four simulated and four real-robot tasks. Across six real-robot bimanual progress-state initializations, CTR raises worst-state success from 56% for the strongest non-CTR schedule mixture to 76%. With π0.5 on an Independent task, a 4 s pause transfers 2.56 s of delay to the opposite arm under the Concurrent schedule distribution, but only 0.25 s with CTR. On real robots, CTR violates task constraints in only 0–4% of trials, versus 36–98% for narrow-schedule baselines.}
 }
 
 @article{ye2026evorl,
@@ -16,12 +15,12 @@
   title={Evo-RL: Iterative Robot Reinforcement Learning from Selective Experience},
   author={Ye, Kai and Jin, Yifan and Luo, Qianhang and Zhang, Hongru and Zhang, Jiedong and Hu, Shuyuan and Wu, Song-Yuan and Xu, Jihai and Zhao, Jie and Zhao, Bo},
   year={2026},
-  selected={true},
+  selected={false},
   preview={evo-rl.png},
   pdf={Evo_RL_ICRA2027.pdf},
   code={https://github.com/MINT-SJTU/Evo-RL},
   note={Submitted to ICRA 2027.},
-  abstract={Evo-RL improves robot policies through iterative human-intervention refinement and advantage-guided experience selection. It combines demonstrations, human corrections, and autonomous rollouts, and introduces RW-RL, a dataset of over 1,000 hours of real-world interaction across four robot embodiments.}
+  abstract={Improving robot policies from execution feedback requires addressing two challenges: obtaining corrective behavior for difficulties encountered during deployment and identifying useful behavior within accumulated experience. To address these challenges, we propose Evo-RL, an iterative reinforcement learning method that combines human interventions with advantage-guided experience selection. Human interventions provide corrections for difficult states, while advantage estimates prioritize behavior in demonstrations and autonomous rollouts associated with lower execution-time and intervention costs. These complementary sources guide policy fine-tuning, followed by redeployment for further improvement. To support research on learning from these different experience sources, we introduce RW-RL, comprising over 1,000 hours of real-world interaction across four robot embodiments, with action-source metadata and semantic annotations. On real-world precision insertion, Evo-RL improves attempt success rate over RECAP by 30.46%. Our code, model checkpoints, and dataset are publicly available.}
 }
 
 @article{hu2025,
@@ -33,10 +32,10 @@
       primaryClass={cs.RO},
       pdf={IROS26_0417_MS.pdf},
       selected={true},
-      highlight={true},
       preview={dynMRC.png},
       arxiv={2602.09472},
-      note={Accepted to IROS 2026.}
+      note={Accepted to IROS 2026.},
+      abstract={Large Language Models (LLMs) enable non-experts to specify open-world multi-robot tasks, but the generated plans are often kinematically infeasible and inefficient in long-horizon settings. Formal methods such as Linear Temporal Logic (LTL) offer correctness and optimality guarantees, yet they are typically offline and scale poorly. To bridge this gap, we propose a neuro-symbolic framework that grounds human instructions into hierarchical LTLf specifications (i.e., LTL on finite traces) and solves the resulting Simultaneous Task Allocation and Planning (STAP) problem. Unlike static approaches, our system handles stochastic environmental changes—such as user motion or updated instructions—through a receding-horizon planning (RHP) loop with real-time perception, dynamically refining plans over a hierarchical state space. Experiments in simulation and on real robots demonstrate that our approach significantly outperforms baseline methods in success rate and interaction fluency while reducing replanning overhead.}
 }
 
 
@@ -49,7 +48,7 @@
       primaryClass={cs.RO},
       arxiv={2509.14178},
       year={2025},
-      selected={true},
+      selected={false},
       preview={gen2real.png},
       note={Submitted to RAL.}
 }
@@ -64,7 +63,7 @@
   pages={256},
   year={2021},
   publisher={Springer},
-  selected={true},
+  selected={false},
   preview={medicalAttention.png},
   arxiv={2101.11430}
 }

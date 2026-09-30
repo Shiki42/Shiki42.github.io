@@ -6,19 +6,20 @@ The supplied forest photograph is a single fixed background behind the entire pa
 
 - Palette: pine `#0C2828`, ink `#051A1F`, forest `#1C3827`, moss `#465835`, sage `#53655D`, fog `#ABB0B5`, light fog `#C1C5CA`, paper `#EFF1EE`, earth `#74684B`. Secondary and earth text mix with ink or pine for contrast over the photograph.
 - Typography: locally hosted Newsreader at weight 300 for display type and the Gibson quotation; DM Sans for clear body text, questions, navigation, authors, and metadata. No text is blurred.
-- Composition: a compact masthead, restrained name, quotation with attribution, and introduction beside the portrait. Both research questions appear immediately. Education and prior research continue in the same column.
-- Content: editorial image-and-text rows for five papers and two open-source projects. CTR and the IROS paper retain their featured status. Full authors, collaborator links, submission notes, PDFs, abstracts, and project descriptions are preserved.
+- Composition: a compact masthead, quotation with attribution above the name, and introduction beside the portrait. Both research questions appear immediately. Education and prior research continue in the same column.
+- Content: editorial image-and-text rows for five papers and two open-source projects. Selected research contains CTR and the IROS paper; the other three papers follow Open source. Full authors, collaborator links, submission notes, PDFs, abstracts, and project descriptions are preserved.
 - Motion: 24–30s fog drift, a 16px cap on background scroll displacement, and a subtle 1000ms content reveal. Fog continues throughout the page. A fixed pause control stops decorative motion; motion also stops while the document is hidden.
 - Accessibility: readable links, explicit keyboard focus, useful figure alternatives, native abstract disclosure controls, and one mobile reading column. Reduced-motion mode retains static mist and shows all content. Project rollout animation opens only through a deliberate link; its in-page preview is static.
 - Texture: extremely fine, static film grain. Research figures use exact lossless WebP, preserving scientific information. Original PNGs and PDFs remain available.
 
 ## Reading order
 
-1. Introduction (`#about`): name and Chinese name, the user-provided William Gibson quotation, role and MINT Lab affiliation, PhD search, both current research questions, education, advisor links, portrait, and personal interests.
-2. Research (`#research`): CTR, human-aware multi-robot handover, Evo-RL, Gen2Real, and explainable medical-code prediction. CTR and IROS are featured work.
+1. Introduction (`#about`): the user-provided William Gibson quotation, name and Chinese name, role and MINT Lab affiliation, PhD search, both current research questions, education, advisor links, skiing portrait, expandable personal interests, and larger Google Scholar and GitHub links below the biography.
+2. Selected research (`#research`): CTR and human-aware multi-robot handover. Each venue and status appears once above its title.
 3. Open source (`#open-source`): Evo-RL (Core Contributor) and Evo-RLT (Independent Developer & Maintainer), with descriptions, previews, repository links, and the Evo-RLT rollout demo.
-4. Updates (`#updates`): all four existing dated announcements.
-5. Contact (`#contact`): email, Google Scholar, GitHub, and copyright on the same forest background.
+4. More research (`#more-research`): Evo-RL, Gen2Real, and explainable medical-code prediction, followed by the bibliography download.
+5. Updates (`#updates`): all four existing dated announcements.
+6. Contact (`#contact`): email and copyright on the same forest background.
 
 ## Implementation and publishing
 

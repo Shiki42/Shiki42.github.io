@@ -49,15 +49,14 @@
 
     <main id="main" tabindex="-1">
       <section class="introduction wrap" id="about" aria-labelledby="intro-title">
-        <p class="eyebrow">Robot learning</p>
-        <div class="name-line">
-          <h1 id="intro-title">Shuyuan Hu</h1>
-          <p class="chinese-name" lang="zh">胡书源</p>
-        </div>
         <figure class="intro-quote">
           <blockquote>“The future is already here—it’s just not very evenly distributed.”</blockquote>
           <figcaption>— William Gibson</figcaption>
         </figure>
+        <div class="name-line">
+          <h1 id="intro-title">Shuyuan Hu</h1>
+          <p class="chinese-name" lang="zh">胡书源</p>
+        </div>
 
         <div class="intro-layout">
           <div class="biography">
@@ -68,11 +67,20 @@
             </ol>
             <p>I received my Master of Science in Computer Science from the University of Southern California and my Bachelor of Science in Computer Science from the University of Leeds.</p>
             <p>During my master’s study, I worked on enhancing the interpretability of computer vision models using graph structures with <a href="https://gyhandy.github.io/">Dr. Yunhao Ge</a>. During my undergraduate study, I conducted research on explainable natural language processing under the supervision of <a href="https://scholar.google.com/citations?user=5CVB6eYAAAAJ">Prof. Fei Teng</a>.</p>
+            <div class="profile-links">
+              <a class="quiet-link" href="https://scholar.google.com/citations?user=zXVrlqMAAAAJ">Google Scholar</a>
+              <a class="quiet-link" href="https://github.com/Shiki42">GitHub</a>
+            </div>
           </div>
 
           <figure class="portrait">
-            <img src="assets/img/portrait.webp" alt="Shuyuan Hu standing beside a river in a mountain town." width="575" height="575" loading="lazy" decoding="async">
-            <figcaption><span>Beyond the lab</span><span>Sci-Fi · Anime · Skiing</span></figcaption>
+            <img src="assets/img/portrait-skiing.jpg" alt="Shuyuan Hu carrying a snowboard in snowy mountains." width="1439" height="1080" loading="lazy" decoding="async">
+            <figcaption>
+              <details class="personal-interests">
+                <summary>Beyond the lab</summary>
+                <p>In my spare time, I like Sci-Fi, Anime, and Skiing.</p>
+              </details>
+            </figcaption>
           </figure>
         </div>
       </section>
@@ -83,25 +91,22 @@
             <p class="eyebrow">Research</p>
             <h2 id="research-title">Selected research.</h2>
           </div>
-          <a class="quiet-link" href="https://scholar.google.com/citations?user=zXVrlqMAAAAJ">Google Scholar</a>
         </div>
 
         <article class="paper reveal" aria-labelledby="paper-ctr">
           <figure class="paper-figure">
             <img src="assets/img/publication_preview/ctr.webp" alt="Constraint-preserving Temporal Recombination preserves task coordination while varying the schedules of bimanual demonstrations." width="685" height="260" loading="lazy" decoding="async">
-            <figcaption>Constraint-preserving Temporal Recombination</figcaption>
           </figure>
           <div class="paper-content">
-            <p class="paper-meta"><span class="paper-number">01</span><span>ICLR 2027 · Submission</span><span class="paper-status">Featured work</span></p>
+            <p class="paper-meta"><span class="paper-number">01</span><span>Submitted to ICLR 2027</span></p>
             <h3 id="paper-ctr">Learn the Task, Not the Schedule: Reducing Spurious Cross-Arm Coupling in Bimanual Imitation Learning</h3>
             <p class="authors"><strong>Shuyuan Hu</strong>, <a href="https://openreview.net/profile?id=~Deng-Ke_Wu1">Deng-Ke Wu</a>, <a href="https://openreview.net/profile?id=~Yifan_Jin5">Yifan Jin</a>, <a href="https://openreview.net/profile?id=~Qianhang_Luo1">Qianhang Luo</a>, <a href="https://openreview.net/profile?id=~Mingchen_Ju1">Mingchen Ju</a>, <a href="https://elvin-yk.github.io/kaiye.github.io/">Kai Ye</a>, <a href="https://openreview.net/profile?id=~Bo_Zhao4">Bo Zhao</a></p>
-            <p class="publication-note">Submitted to ICLR 2027.</p>
             <div class="paper-links" aria-label="CTR paper resources">
               <a href="assets/pdf/CTR_ICLR2027.pdf">Paper PDF</a>
             </div>
             <details class="paper-abstract">
               <summary>Abstract</summary>
-              <p>Constraint-preserving Temporal Recombination (CTR) broadens the schedules seen during bimanual imitation learning while preserving recorded arm-local behavior and task-required cross-arm constraints. Evaluations with Diffusion Policy, ACT, and pi0.5 on simulated and real-robot tasks show reduced spurious cross-arm coupling while retaining necessary coordination.</p>
+              <p>A bimanual demonstration specifies both what the robot should do and one particular schedule for when each arm should act. Standard imitation learning does not distinguish task-required cross-arm constraints from incidental scheduling choices, and may therefore exploit opposite-arm progress as a shortcut cue, creating spurious cross-arm coupling even where relative timing is irrelevant for the current task phase. We introduce Constraint-preserving Temporal Recombination (CTR), a training-time data intervention that preserves recorded arm-local sensorimotor content while retiming the corresponding segments to realize admissible schedules that preserve task-required cross-arm constraints. We use CTR to train Diffusion Policy, Action Chunking with Transformers, and π0.5, and evaluate them on four simulated and four real-robot tasks. Across six real-robot bimanual progress-state initializations, CTR raises worst-state success from 56% for the strongest non-CTR schedule mixture to 76%. With π0.5 on an Independent task, a 4 s pause transfers 2.56 s of delay to the opposite arm under the Concurrent schedule distribution, but only 0.25 s with CTR. On real robots, CTR violates task constraints in only 0–4% of trials, versus 36–98% for narrow-schedule baselines.</p>
             </details>
           </div>
         </article>
@@ -109,77 +114,21 @@
         <article class="paper reveal" aria-labelledby="paper-handover">
           <figure class="paper-figure">
             <img src="assets/img/publication_preview/dynMRC.webp" alt="A multi-robot handover demonstration and overview of the dynamic planning framework." width="1224" height="583" loading="lazy" decoding="async">
-            <figcaption>Human-aware multi-robot handover</figcaption>
           </figure>
           <div class="paper-content">
-            <p class="paper-meta"><span class="paper-number">02</span><span>IROS 2026 · Accepted</span><span class="paper-status">Featured work</span></p>
+            <p class="paper-meta"><span class="paper-number">02</span><span>IROS 2026 · Accepted</span></p>
             <h3 id="paper-handover">LLM-Grounded Dynamic Task Planning with Hierarchical Temporal Logic for Human-Aware Multi-Robot Handover</h3>
             <p class="authors"><strong>Shuyuan Hu</strong>, Tao Lin, <a href="https://elvin-yk.github.io/kaiye.github.io/">Kai Ye</a>, Yang Yang, <a href="http://zhangtianwei.info/">Tianwei Zhang</a></p>
-            <p class="publication-note">Accepted to IROS 2026.</p>
             <div class="paper-links" aria-label="Handover paper resources">
               <a href="https://arxiv.org/abs/2602.09472">arXiv</a>
               <a href="assets/pdf/IROS26_0417_MS.pdf">Paper PDF</a>
             </div>
-          </div>
-        </article>
-
-        <article class="paper reveal" aria-labelledby="paper-evorl">
-          <figure class="paper-figure">
-            <img src="assets/img/publication_preview/evo-rl.webp" alt="The Evo-RL pipeline selects experience from demonstrations, human interventions, and autonomous robot rollouts." width="890" height="465" loading="lazy" decoding="async">
-            <figcaption>Iterative learning from selective experience</figcaption>
-          </figure>
-          <div class="paper-content">
-            <p class="paper-meta"><span class="paper-number">03</span><span>ICRA 2027 · Submission</span></p>
-            <h3 id="paper-evorl">Evo-RL: Iterative Robot Reinforcement Learning from Selective Experience</h3>
-            <p class="authors"><a href="https://elvin-yk.github.io/kaiye.github.io/">Kai Ye</a>, <a href="https://openreview.net/profile?id=~Yifan_Jin5">Yifan Jin</a>, <a href="https://openreview.net/profile?id=~Qianhang_Luo1">Qianhang Luo</a>, Hongru Zhang, Jiedong Zhang, <strong>Shuyuan Hu</strong>, Song-Yuan Wu, Jihai Xu, Jie Zhao, <a href="https://openreview.net/profile?id=~Bo_Zhao4">Bo Zhao</a></p>
-            <p class="publication-note">Submitted to ICRA 2027.</p>
-            <div class="paper-links" aria-label="Evo-RL paper resources">
-              <a href="assets/pdf/Evo_RL_ICRA2027.pdf">Paper PDF</a>
-              <a href="https://github.com/MINT-SJTU/Evo-RL">Code</a>
-            </div>
             <details class="paper-abstract">
               <summary>Abstract</summary>
-              <p>Evo-RL improves robot policies through iterative human-intervention refinement and advantage-guided experience selection. It combines demonstrations, human corrections, and autonomous rollouts, and introduces RW-RL, a dataset of over 1,000 hours of real-world interaction across four robot embodiments.</p>
+              <p>Large Language Models (LLMs) enable non-experts to specify open-world multi-robot tasks, but the generated plans are often kinematically infeasible and inefficient in long-horizon settings. Formal methods such as Linear Temporal Logic (LTL) offer correctness and optimality guarantees, yet they are typically offline and scale poorly. To bridge this gap, we propose a neuro-symbolic framework that grounds human instructions into hierarchical LTLf specifications (i.e., LTL on finite traces) and solves the resulting Simultaneous Task Allocation and Planning (STAP) problem. Unlike static approaches, our system handles stochastic environmental changes—such as user motion or updated instructions—through a receding-horizon planning (RHP) loop with real-time perception, dynamically refining plans over a hierarchical state space. Experiments in simulation and on real robots demonstrate that our approach significantly outperforms baseline methods in success rate and interaction fluency while reducing replanning overhead.</p>
             </details>
           </div>
         </article>
-
-        <article class="paper reveal" aria-labelledby="paper-gen2real">
-          <figure class="paper-figure">
-            <img src="assets/img/publication_preview/gen2real.webp" alt="The Gen2Real pipeline connecting generated video to dexterous robot manipulation." width="1306" height="886" loading="lazy" decoding="async">
-            <figcaption>From generated video to manipulation</figcaption>
-          </figure>
-          <div class="paper-content">
-            <p class="paper-meta"><span class="paper-number">04</span><span>arXiv · 2025</span></p>
-            <h3 id="paper-gen2real">Gen2Real: Towards Demo-Free Dexterous Manipulation by Harnessing Generated Video</h3>
-            <p class="authors"><a href="https://elvin-yk.github.io/kaiye.github.io/">Kai Ye</a>, Yuhang Wu, <strong>Shuyuan Hu</strong>, Junliang Li, Meng Liu, Yongquan Chen, Rui Huang</p>
-            <p class="publication-note">Submitted to RAL.</p>
-            <div class="paper-links" aria-label="Gen2Real paper resources">
-              <a href="https://arxiv.org/abs/2509.14178">arXiv</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="paper reveal" aria-labelledby="paper-explainable">
-          <figure class="paper-figure">
-            <img src="assets/img/publication_preview/medicalAttention.webp" alt="An overview of the explainable CNN architecture for medical code prediction from clinical text." width="1230" height="645" loading="lazy" decoding="async">
-            <figcaption>Interpretable learning from clinical text</figcaption>
-          </figure>
-          <div class="paper-content">
-            <p class="paper-meta"><span class="paper-number">05</span><span>BMC MIDM · 2021</span></p>
-            <h3 id="paper-explainable">An explainable CNN approach for medical codes prediction from clinical text</h3>
-            <p class="authors"><strong>Shuyuan Hu</strong>, Fei Teng, Lufei Huang, Jun Yan, Haibo Zhang</p>
-            <p class="publication-note"><cite>BMC Medical Informatics and Decision Making</cite>, 21 (Suppl 9), 256, 2021.</p>
-            <div class="paper-links" aria-label="Medical code prediction paper resources">
-              <a href="https://arxiv.org/abs/2101.11430">arXiv</a>
-            </div>
-          </div>
-        </article>
-
-        <div class="research-end reveal">
-          <p>Full citations, in one place.</p>
-          <a class="quiet-link" href="assets/bibliography/publications.bib" download>Download bibliography</a>
-        </div>
       </section>
 
       <section class="open-source section wrap" id="open-source" aria-labelledby="open-source-title">
@@ -201,7 +150,6 @@
         <article class="paper project reveal" aria-labelledby="project-evorlt">
           <figure class="paper-figure">
             <img src="assets/img/publication_preview/evo-rlt.webp" alt="Evo-RLT real-robot rollout demonstration." width="560" height="280" loading="lazy" decoding="async">
-            <figcaption>Real-robot rollout</figcaption>
           </figure>
           <div class="paper-content">
             <p class="paper-meta">Independent Developer &amp; Maintainer</p>
@@ -213,6 +161,66 @@
             </div>
           </div>
         </article>
+      </section>
+
+      <section class="research section wrap" id="more-research" aria-labelledby="more-research-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Research</p>
+          <h2 id="more-research-title">More research.</h2>
+        </div>
+        <article class="paper reveal" aria-labelledby="paper-evorl">
+          <figure class="paper-figure">
+            <img src="assets/img/publication_preview/evo-rl.webp" alt="The Evo-RL pipeline selects experience from demonstrations, human interventions, and autonomous robot rollouts." width="890" height="465" loading="lazy" decoding="async">
+          </figure>
+          <div class="paper-content">
+            <p class="paper-meta"><span class="paper-number">03</span><span>Submitted to ICRA 2027</span></p>
+            <h3 id="paper-evorl">Evo-RL: Iterative Robot Reinforcement Learning from Selective Experience</h3>
+            <p class="authors"><a href="https://elvin-yk.github.io/kaiye.github.io/">Kai Ye</a>, <a href="https://openreview.net/profile?id=~Yifan_Jin5">Yifan Jin</a>, <a href="https://openreview.net/profile?id=~Qianhang_Luo1">Qianhang Luo</a>, Hongru Zhang, Jiedong Zhang, <strong>Shuyuan Hu</strong>, Song-Yuan Wu, Jihai Xu, Jie Zhao, <a href="https://openreview.net/profile?id=~Bo_Zhao4">Bo Zhao</a></p>
+            <div class="paper-links" aria-label="Evo-RL paper resources">
+              <a href="assets/pdf/Evo_RL_ICRA2027.pdf">Paper PDF</a>
+              <a href="https://github.com/MINT-SJTU/Evo-RL">Code</a>
+            </div>
+            <details class="paper-abstract">
+              <summary>Abstract</summary>
+              <p>Improving robot policies from execution feedback requires addressing two challenges: obtaining corrective behavior for difficulties encountered during deployment and identifying useful behavior within accumulated experience. To address these challenges, we propose Evo-RL, an iterative reinforcement learning method that combines human interventions with advantage-guided experience selection. Human interventions provide corrections for difficult states, while advantage estimates prioritize behavior in demonstrations and autonomous rollouts associated with lower execution-time and intervention costs. These complementary sources guide policy fine-tuning, followed by redeployment for further improvement. To support research on learning from these different experience sources, we introduce RW-RL, comprising over 1,000 hours of real-world interaction across four robot embodiments, with action-source metadata and semantic annotations. On real-world precision insertion, Evo-RL improves attempt success rate over RECAP by 30.46%. Our code, model checkpoints, and dataset are publicly available.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="paper reveal" aria-labelledby="paper-gen2real">
+          <figure class="paper-figure">
+            <img src="assets/img/publication_preview/gen2real.webp" alt="The Gen2Real pipeline connecting generated video to dexterous robot manipulation." width="1306" height="886" loading="lazy" decoding="async">
+          </figure>
+          <div class="paper-content">
+            <p class="paper-meta"><span class="paper-number">04</span><span>arXiv · 2025</span></p>
+            <h3 id="paper-gen2real">Gen2Real: Towards Demo-Free Dexterous Manipulation by Harnessing Generated Video</h3>
+            <p class="authors"><a href="https://elvin-yk.github.io/kaiye.github.io/">Kai Ye</a>, Yuhang Wu, <strong>Shuyuan Hu</strong>, Junliang Li, Meng Liu, Yongquan Chen, Rui Huang</p>
+            <p class="publication-note">Submitted to RAL.</p>
+            <div class="paper-links" aria-label="Gen2Real paper resources">
+              <a href="https://arxiv.org/abs/2509.14178">arXiv</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="paper reveal" aria-labelledby="paper-explainable">
+          <figure class="paper-figure">
+            <img src="assets/img/publication_preview/medicalAttention.webp" alt="An overview of the explainable CNN architecture for medical code prediction from clinical text." width="1230" height="645" loading="lazy" decoding="async">
+          </figure>
+          <div class="paper-content">
+            <p class="paper-meta"><span class="paper-number">05</span><span>BMC MIDM · 2021</span></p>
+            <h3 id="paper-explainable">An explainable CNN approach for medical codes prediction from clinical text</h3>
+            <p class="authors"><strong>Shuyuan Hu</strong>, Fei Teng, Lufei Huang, Jun Yan, Haibo Zhang</p>
+            <p class="publication-note"><cite>BMC Medical Informatics and Decision Making</cite>, 21 (Suppl 9), 256, 2021.</p>
+            <div class="paper-links" aria-label="Medical code prediction paper resources">
+              <a href="https://arxiv.org/abs/2101.11430">arXiv</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="research-end reveal">
+          <p>Full citations, in one place.</p>
+          <a class="quiet-link" href="assets/bibliography/publications.bib" download>Download bibliography</a>
+        </div>
       </section>
 
       <section class="updates section wrap" id="updates" aria-labelledby="updates-title">
@@ -246,10 +254,6 @@
           <h2 id="contact-title">Let’s talk research.</h2>
           <p>Email is the best way to reach me.</p>
           <a class="email-link" href="mailto:hushuyuan42@gmail.com">hushuyuan42@gmail.com</a>
-          <div class="contact-links">
-            <a class="quiet-link" href="https://scholar.google.com/citations?user=zXVrlqMAAAAJ">Google Scholar</a>
-            <a class="quiet-link" href="https://github.com/Shiki42">GitHub</a>
-          </div>
         </div>
       </section>
     </main>
