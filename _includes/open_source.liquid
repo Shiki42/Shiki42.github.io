@@ -5,6 +5,25 @@
         <div class="row">
           <div class="col col-sm-2 abbr">
             <abbr class="badge rounded w-100">{{ project.name }}</abbr>
+            {% if project.image contains '://' %}
+              <img
+                class="preview z-depth-1 rounded"
+                src="{{ project.image }}"
+                alt="{{ project.name }} robot rollout"
+                loading="lazy"
+                width="100%"
+                height="auto"
+              >
+            {% else %}
+              {%
+                include figure.liquid
+                path=project.image
+                sizes="200px"
+                class="preview z-depth-1 rounded"
+                zoomable=true
+                alt=project.name
+              %}
+            {% endif %}
           </div>
           <div class="col-sm-8">
             <div class="title">

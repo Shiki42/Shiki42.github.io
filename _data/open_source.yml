@@ -1,5 +1,6 @@
 - name: Evo-RL
   role: Core Contributor
+  image: /assets/img/publication_preview/evo-rl.png
   url: https://github.com/MINT-SJTU/Evo-RL
   description: >-
     Open real-world reinforcement learning pipelines for SO101 and AgileX PiPER/PiPER-X,
@@ -7,6 +8,7 @@
 
 - name: Evo-RLT
   role: Independent Developer & Maintainer
+  image: https://raw.githubusercontent.com/MINT-SJTU/Evo-RLT/main/website/assets/images/rlt_rollout.gif
   url: https://github.com/MINT-SJTU/Evo-RLT
   description: >-
     An independent LeRobot-based reproduction of RLT, covering VLA fine-tuning,
