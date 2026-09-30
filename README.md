@@ -18,7 +18,7 @@ Open `http://127.0.0.1:4173`.
 - `assets/bibliography/publications.bib`: the five researcher publication entries.
 - `DESIGN.md`: visual system and reading structure.
 
-All original researcher photographs, publication figures, and research PDFs are preserved. Display figures use exact lossless WebP. The original Evo-RLT rollout GIF is linked from a static preview, so it does not introduce uncontrolled movement. Fonts are self-hosted with their SIL Open Font Licenses. The Chinese name uses a three-character Noto Serif SC subset. The portrait uses the supplied skiing photograph; personal interests open through a native disclosure link.
+All original researcher photographs, publication figures, and research PDFs are preserved. Display figures use exact lossless WebP. The original Evo-RLT rollout GIF is linked from a static preview, so it does not introduce uncontrolled movement. Fonts are self-hosted with their SIL Open Font Licenses. The Chinese name uses a three-character LXGW WenKai TC subset. The portrait is 150% of its previous desktop width and sits closer to the biography. Opening the native Beyond the lab disclosure switches from the original portrait to the supplied skiing photograph and reveals personal interests; closing it restores the original portrait.
 
 The forest and three fog layers continue throughout the page. Reduced-motion mode keeps the static photograph and mist, disables movement and scrolling effects, and immediately shows all content. The pause control also freezes decorative motion. Body text and scientific figures are never blurred.
 

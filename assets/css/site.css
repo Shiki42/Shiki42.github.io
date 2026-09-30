@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Noto Serif SC";
+  font-family: "LXGW WenKai TC";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/noto-serif-sc-name.ttf") format("truetype");
+  src: url("../fonts/lxgw-wenkai-name.ttf") format("truetype");
   unicode-range: U+4E66, U+6E90, U+80E1;
 }
 
@@ -360,7 +360,7 @@ img {
 
 .chinese-name {
   color: var(--ink);
-  font-family: "Noto Serif SC", serif;
+  font-family: "LXGW WenKai TC", serif;
   font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -392,8 +392,8 @@ img {
 
 .intro-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.3fr);
-  gap: clamp(3rem, 7vw, 6rem);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 22.5rem);
+  gap: 2rem;
   align-items: start;
   margin-top: 2rem;
 }
@@ -484,8 +484,8 @@ img {
 
 .portrait {
   width: 100%;
-  max-width: 15rem;
-  justify-self: end;
+  max-width: 22.5rem;
+  justify-self: start;
   margin-top: 0.3rem;
 }
 
@@ -493,6 +493,18 @@ img {
   width: 100%;
   height: auto;
   filter: saturate(0.58) contrast(0.93);
+}
+
+.portrait-personal {
+  display: none;
+}
+
+.portrait:has(.personal-interests[open]) .portrait-primary {
+  display: none;
+}
+
+.portrait:has(.personal-interests[open]) .portrait-personal {
+  display: block;
 }
 
 .portrait figcaption {
@@ -819,8 +831,8 @@ html[data-page-visible="false"] .fog {
 
 @media (max-width: 1000px) {
   .intro-layout {
-    gap: 3rem;
-    grid-template-columns: minmax(0, 1fr) minmax(12rem, 0.35fr);
+    gap: 1.5rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 18rem);
   }
 
   .paper {
@@ -926,13 +938,13 @@ html[data-page-visible="false"] .fog {
 
   .intro-layout {
     grid-template-columns: minmax(0, 1fr);
-    gap: 2.75rem;
+    gap: 1.5rem;
   }
 
   .portrait {
-    width: 72%;
-    max-width: 20rem;
-    justify-self: end;
+    width: 100%;
+    max-width: 30rem;
+    justify-self: start;
     margin-top: 0;
   }
 
