@@ -4,11 +4,9 @@ const navigation = document.querySelector('#navigation');
 const menuToggle = document.querySelector('.menu-toggle');
 const motionToggle = document.querySelector('.motion-toggle');
 const motionLabel = document.querySelector('.motion-label');
-const hero = document.querySelector('.hero');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const mobileNavigation = window.matchMedia('(max-width: 760px)');
 let userPaused = false;
-let coverVisible = true;
 let scrollFrame = null;
 
 function closeMenu() {
@@ -71,13 +69,13 @@ function motionIsPaused() {
 
 function updateParallax() {
   scrollFrame = null;
-  if (motionIsPaused() || !coverVisible || document.hidden) return;
+  if (motionIsPaused() || document.hidden) return;
   const offset = Math.min(Math.max(window.scrollY, 0) * 0.018, 16);
   root.style.setProperty('--parallax-y', `${offset.toFixed(2)}px`);
 }
 
 function queueParallax() {
-  if (scrollFrame !== null || motionIsPaused() || !coverVisible || document.hidden) return;
+  if (scrollFrame !== null || motionIsPaused() || document.hidden) return;
   scrollFrame = window.requestAnimationFrame(updateParallax);
 }
 
@@ -104,13 +102,6 @@ motionToggle.addEventListener('click', () => {
 });
 
 reducedMotion.addEventListener('change', syncMotion);
-
-const coverObserver = new IntersectionObserver(([entry]) => {
-  coverVisible = entry.isIntersecting;
-  root.dataset.coverVisible = String(coverVisible);
-  if (coverVisible) queueParallax();
-}, { threshold: 0 });
-coverObserver.observe(hero);
 
 window.addEventListener('scroll', queueParallax, { passive: true });
 document.addEventListener('visibilitychange', () => {

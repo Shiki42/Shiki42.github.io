@@ -1,10 +1,8 @@
 # Shuyuan Hu — Research homepage
 
-A quiet editorial homepage built around the supplied forest photograph. Plain HTML, CSS, and JavaScript; no framework, package manager, Jekyll, or build dependency.
+A continuous editorial homepage with a fixed forest photograph, slow mist, and clear research content. Plain HTML, CSS, and JavaScript; no Jekyll, framework, package manager, build dependency, or runtime CDN.
 
 ## Preview
-
-From this repository:
 
 ```sh
 python3 -m http.server 4173 --bind 127.0.0.1
@@ -14,22 +12,20 @@ Open `http://127.0.0.1:4173`.
 
 ## Edit
 
-- `index.html`: biography, publications, news, and contact details. Content is readable without JavaScript.
-- `assets/css/site.css`: the complete visual system. All palette, fog, grain, and motion parameters live in `:root`.
-- `assets/js/site.js`: mobile navigation, slow reveals, capped scroll displacement, and the atmosphere pause control.
-- `assets/bibliography/publications.bib`: the three original researcher publication entries.
-- `DESIGN.md`: visual direction, structure, and acceptance criteria.
+- `index.html`: quotation, biography, research questions, five publications, two open-source projects, news, and contact details.
+- `assets/css/site.css`: typography, responsive layout, and color, fog, grain, and motion variables in `:root`.
+- `assets/js/site.js`: mobile navigation, quiet reveals, capped background displacement, and the fixed pause control.
+- `assets/bibliography/publications.bib`: the five researcher publication entries.
+- `DESIGN.md`: visual system and reading structure.
 
-The original portrait photographs, three research figures, and both research PDFs are preserved. The forest has desktop and mobile WebP encodings; research figures use lossless WebP for display. Fonts are hosted locally with their SIL Open Font Licenses. There are no runtime requests to a font CDN or analytics service.
+All original researcher photographs, publication figures, and research PDFs are preserved. Display figures use exact lossless WebP. The original Evo-RLT rollout GIF is linked from a static preview, so it does not introduce uncontrolled movement. Fonts are self-hosted with their SIL Open Font Licenses.
 
-Reduced-motion mode retains the photograph and static mist, disables drifting and scrolling effects, and immediately exposes all content. The pause control also freezes the atmosphere. Decorative animation pauses when the cover leaves the viewport or the document is hidden. Body text and research figures are never blurred.
-
-## Validation
-
-Checked in the browser at 1440px, 390px, and 320px. At 320px with text enlarged to 200%, content has no horizontal overflow. Mobile navigation, Escape focus return, chapter links, the atmosphere pause control, the 404 page, image loading, and browser error logs were checked. Reduced-motion initialization and the static CSS rules were checked with an isolated preference simulation. Local asset paths, anchor IDs, PDF responses, bibliography entries, JavaScript syntax, and deployment YAML were validated. The three display figures preserve their original RGBA pixels; original photographs and PDFs retain their checksums.
+The forest and three fog layers continue throughout the page. Reduced-motion mode keeps the static photograph and mist, disables movement and scrolling effects, and immediately shows all content. The pause control also freezes decorative motion. Body text and scientific figures are never blurred.
 
 ## Publish
 
-The repository's existing GitHub Pages configuration serves `gh-pages`. A push to `main` runs the small static publishing workflow and replaces its generated contents. Only the HTML, metadata, `.nojekyll`, and `assets/` directory are published. Documentation and repository files are excluded.
+GitHub Pages serves `main` from the repository root. `.nojekyll` makes this a static publication. Push reviewed changes to `main`; no custom deployment workflow or generated publishing branch is needed. The website is available at `https://shiki42.github.io/`.
 
-This redesign lives on `codex/mist-journal` until it is merged into `main`. A local commit alone does not update the public site.
+## Validation
+
+Validate desktop, 390px and 320px mobile layouts, and 200% text enlargement. Check navigation and Escape focus return, persistent forest atmosphere, pause and reduced motion, abstract disclosures, figure loading, local references, complete bibliography, PDF responses, and the deployed public page.
