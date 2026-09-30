@@ -50,6 +50,7 @@
   --reveal-distance: 12px;
   --ease-quiet: cubic-bezier(0.22, 0.61, 0.36, 1);
   --hover-duration: 350ms;
+  --portrait-duration: 700ms;
 }
 
 *,
@@ -481,22 +482,66 @@ img {
   margin-top: 0.3rem;
 }
 
+.portrait-photos {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+  overflow: hidden;
+  transition: padding-bottom var(--portrait-duration) var(--ease-quiet);
+}
+
 .portrait img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: auto;
-  filter: saturate(0.58) contrast(0.93);
+  transition: opacity var(--portrait-duration) var(--ease-quiet), visibility 0s var(--portrait-duration);
+}
+
+.portrait-primary {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
 }
 
 .portrait-personal {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.portrait:has(.personal-interests[open]) .portrait-photos {
+  padding-bottom: 75.0521%;
 }
 
 .portrait:has(.personal-interests[open]) .portrait-primary {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0s, var(--portrait-duration);
 }
 
 .portrait:has(.personal-interests[open]) .portrait-personal {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.back-label,
+.personal-interests[open] .lab-label {
+  display: none;
+}
+
+.personal-interests[open] .back-label {
+  display: inline;
+}
+
+.personal-interests[open] p {
+  animation: interest-appear var(--portrait-duration) var(--ease-quiet);
+}
+
+@keyframes interest-appear {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .portrait figcaption {
@@ -1028,7 +1073,13 @@ html[data-page-visible="false"] .fog {
 
   .reveal,
   a,
-  .navigation a::after {
+  .navigation a::after,
+  .portrait-photos,
+  .portrait img {
     transition: none;
+  }
+
+  .personal-interests[open] p {
+    animation: none;
   }
 }
