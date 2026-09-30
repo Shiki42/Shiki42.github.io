@@ -1,0 +1,23 @@
+<div class="publications">
+  <ol class="bibliography">
+    {% for project in site.data.open_source %}
+      <li>
+        <div class="row">
+          <div class="col col-sm-2 abbr">
+            <abbr class="badge rounded w-100">{{ project.name }}</abbr>
+          </div>
+          <div class="col-sm-8">
+            <div class="title">
+              <a href="{{ project.url }}">{{ project.name }}</a>
+            </div>
+            <div class="periodical">{{ project.role }}</div>
+            <p class="mt-2 mb-2">{{ project.description }}</p>
+            <div class="links">
+              <a href="{{ project.url }}" class="btn btn-sm z-depth-0" role="button">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

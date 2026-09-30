@@ -1,3 +1,7 @@
 <div class="publications">
-  {% bibliography --group_by none --query @*[selected=true]* %}
+  {% if include.highlight %}
+    {% bibliography --group_by none --query @*[highlight=true]* %}
+  {% else %}
+    {% bibliography --group_by none --query @*[selected=true && highlight!=true]* %}
+  {% endif %}
 </div>
