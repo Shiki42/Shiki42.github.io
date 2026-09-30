@@ -16,7 +16,7 @@ The supplied forest photograph is a single fixed background behind the entire pa
 
 1. Introduction (`#about`): the user-provided William Gibson quotation, name and Chinese name, role and MINT Lab affiliation, both current research questions, education, a larger portrait closer to the biography that switches to the skiing photograph when personal interests expand, and larger Google Scholar and GitHub links below the biography.
 2. Selected research (`#research`): CTR and human-aware multi-robot handover. Each venue and status appears once above its title.
-3. Open source (`#open-source`): Evo-RL (Core Contributor) and Evo-RLT (Independent Developer & Maintainer), with descriptions, previews, repository links, and the Evo-RLT rollout demo.
+3. Open source (`#open-source`): Evo-RL (Core Contributor) and Evo-RLT (Project Lead), with descriptions, previews, repository links, and the Evo-RLT rollout demo.
 4. More research (`#more-research`): Evo-RL, Gen2Real, and explainable medical-code prediction, followed by the bibliography download.
 5. Updates (`#updates`): all four existing dated announcements.
 6. Contact (`#contact`): email and copyright on the same forest background.
