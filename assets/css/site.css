@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "LXGW WenKai TC";
+  font-family: "Li Xu Ke Shu Fa";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/lxgw-wenkai-name.ttf") format("truetype");
+  src: url("../fonts/LiXuKeShuFa-1.ttf") format("truetype");
   unicode-range: U+4E66, U+6E90, U+80E1;
 }
 
@@ -360,7 +360,7 @@ img {
 
 .chinese-name {
   color: var(--ink);
-  font-family: "LXGW WenKai TC", serif;
+  font-family: "Li Xu Ke Shu Fa", serif;
   font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 400;
   letter-spacing: 0.1em;

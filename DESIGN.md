@@ -5,7 +5,7 @@ The supplied forest photograph is a single fixed background behind the entire pa
 ## Visual system
 
 - Palette: pine `#0C2828`, ink `#051A1F`, forest `#1C3827`, moss `#465835`, sage `#53655D`, fog `#ABB0B5`, light fog `#C1C5CA`, paper `#EFF1EE`, earth `#74684B`. Secondary and earth text mix with ink or pine for contrast over the photograph.
-- Typography: locally hosted Newsreader at weight 300 for display type and the Gibson quotation; LXGW WenKai TC for the Chinese name; DM Sans for clear body text, questions, navigation, authors, and metadata. No text is blurred.
+- Typography: locally hosted Newsreader at weight 300 for display type and the Gibson quotation; the owner-supplied Li Xu Ke Shu Fa font for the Chinese name; DM Sans for clear body text, questions, navigation, authors, and metadata. No text is blurred.
 - Composition: a compact masthead, quotation with attribution above the name, and introduction beside the portrait. Both research questions appear immediately. Education and prior research continue in the same column.
 - Content: editorial image-and-text rows for five papers and two open-source projects. Selected research contains CTR and the IROS paper; the other three papers follow Open source. Full authors, collaborator links, submission notes, PDFs, abstracts, and project descriptions are preserved.
 - Motion: 24–30s fog drift, a 16px cap on background scroll displacement, and a subtle 1000ms content reveal. Fog continues throughout the page. A fixed pause control stops decorative motion; motion also stops while the document is hidden.
