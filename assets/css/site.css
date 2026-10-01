@@ -462,6 +462,7 @@ img {
 
 .biography {
   max-width: 49rem;
+  font-size: 1.125rem;
 }
 
 .biography > p + p {
@@ -470,7 +471,7 @@ img {
 
 .lead {
   color: var(--pine);
-  font-size: 1.375rem;
+  font-size: inherit;
   line-height: 1.65;
   letter-spacing: -0.02em;
 }
@@ -583,7 +584,7 @@ img {
   content: counter(question, decimal-leading-zero);
   padding-top: 0.25rem;
   color: var(--earth-text);
-  font-size: 0.8125rem;
+  font-size: inherit;
   font-variant-numeric: tabular-nums;
 }
 
@@ -787,7 +788,7 @@ cite {
 }
 
 .profile-links .quiet-link {
-  font-size: 1.25rem;
+  font-size: inherit;
 }
 
 .profile-links {
@@ -983,10 +984,6 @@ html[data-page-visible="false"] .fog {
     max-width: 30rem;
     justify-self: start;
     margin-top: 0;
-  }
-
-  .lead {
-    font-size: 1.25rem;
   }
 
   .research-questions li {
