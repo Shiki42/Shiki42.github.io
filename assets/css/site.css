@@ -319,6 +319,7 @@ img {
   mask-repeat: repeat;
   mask-mode: alpha;
   transform-origin: center;
+  will-change: transform, opacity;
   animation-name: fog-evolve;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -333,8 +334,7 @@ img {
 .fog-far::before {
   background: radial-gradient(ellipse 12% 2.8% at 18% 38%, var(--paper) 0%, color-mix(in srgb, var(--paper) 85%, transparent) 32%, transparent 100%), radial-gradient(ellipse 20% 2% at 54% 48%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 9% 3% at 86% 34%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 14% 2.2% at 68% 80%, var(--light-fog) 0%, transparent 100%);
   filter: blur(var(--fog-blur-far));
-  --density-x: 0px;
-  --density-y: 0px;
+  mask-position: 0 0;
   animation-duration: 110s;
   animation-delay: -25s;
 }
@@ -348,8 +348,7 @@ img {
 .fog-middle::before {
   background: radial-gradient(ellipse 10% 2.5% at 55% 50%, var(--paper) 0%, color-mix(in srgb, var(--paper) 85%, transparent) 25%, transparent 100%), radial-gradient(ellipse 16% 1.8% at 20% 70%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 9% 2.5% at 80% 58%, var(--light-fog) 0%, transparent 100%), radial-gradient(ellipse 12% 2% at 95% 84%, var(--paper) 0%, transparent 100%);
   filter: blur(var(--fog-blur-middle));
-  --density-x: 170px;
-  --density-y: 90px;
+  mask-position: 170px 90px;
   animation-duration: 145s;
   animation-delay: -90s;
 }
@@ -363,8 +362,7 @@ img {
 .fog-near::before {
   background: radial-gradient(ellipse 9% 2% at 74% 72%, var(--paper) 0%, color-mix(in srgb, var(--paper) 90%, transparent) 35%, transparent 100%), radial-gradient(ellipse 12% 1.6% at 35% 88%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 7% 2.6% at 45% 36%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 17% 1.8% at 10% 55%, var(--paper) 0%, transparent 100%);
   filter: blur(var(--fog-blur-near));
-  --density-x: 370px;
-  --density-y: 20px;
+  mask-position: 370px 20px;
   animation-duration: 175s;
   animation-delay: -140s;
 }
@@ -901,22 +899,18 @@ html[data-page-visible="false"] .fog::before {
   0%, 100% {
     opacity: 0.12;
     transform: scale(0.88, 0.8) skewX(-4deg);
-    mask-position: var(--density-x) var(--density-y);
   }
   22% {
     opacity: 0.55;
     transform: scale(0.94, 1.02) skewX(2deg);
-    mask-position: calc(var(--density-x) + 20px) calc(var(--density-y) - 8px);
   }
   52% {
     opacity: 1;
     transform: scale(1.04, 1.12) skewX(5deg);
-    mask-position: calc(var(--density-x) + 48px) calc(var(--density-y) - 16px);
   }
   76% {
     opacity: 0.3;
     transform: scale(1.13, 0.92) skewX(-2deg);
-    mask-position: calc(var(--density-x) + 68px) calc(var(--density-y) + 12px);
   }
 }
 
