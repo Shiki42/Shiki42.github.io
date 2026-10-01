@@ -1,6 +1,6 @@
 # Shuyuan Hu — a continuous research journal in the mist
 
-The supplied forest photograph is a single fixed background behind the entire page. A lighter fog-white veil lets the forest show through. Three soft, elongated fog bands drift above that veil within the background stacking context. Defined density gradients, independent directions, and a gentle opacity cycle make their movement visible within a few seconds. The entire atmosphere remains below the sharp content. Identity, research questions, biography, papers, and projects share this atmosphere. The opening has no full-screen cover or separate About chapter.
+The supplied forest photograph is a single fixed background behind the entire page. A lighter fog-white veil lets the forest show through. Three layers of narrow, broken mist wisps drift above that veil within the background stacking context. A small tiled SVG density mask creates uneven, soft patches within each wisp; offset masks, independent directions, and a gentle opacity cycle keep the layers distinct. The entire atmosphere remains below the sharp content. Identity, research questions, biography, papers, and projects share this atmosphere. The opening has no full-screen cover or separate About chapter.
 
 ## Visual system
 

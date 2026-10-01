@@ -35,12 +35,12 @@
   --grain-opacity: 0.025;
   --landscape-saturation: 0.72;
   --landscape-contrast: 0.93;
-  --fog-blur-far: 48px;
-  --fog-blur-middle: 32px;
-  --fog-blur-near: 24px;
-  --fog-opacity-far: 0.48;
-  --fog-opacity-middle: 0.40;
-  --fog-opacity-near: 0.34;
+  --fog-blur-far: 28px;
+  --fog-blur-middle: 18px;
+  --fog-blur-near: 12px;
+  --fog-opacity-far: 0.80;
+  --fog-opacity-middle: 0.70;
+  --fog-opacity-near: 0.60;
   --fog-duration-far: 22s;
   --fog-duration-middle: 18s;
   --fog-duration-near: 16s;
@@ -304,6 +304,10 @@ img {
 .fog {
   position: absolute;
   inset: -30%;
+  mask-image: url("../img/fog-density.svg");
+  mask-size: 640px 320px;
+  mask-repeat: repeat;
+  mask-mode: alpha;
   will-change: transform;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -311,7 +315,7 @@ img {
 }
 
 .fog-far {
-  background: radial-gradient(ellipse 42% 13% at 28% 35%, var(--paper) 0%, color-mix(in srgb, var(--paper) 80%, transparent) 42%, transparent 100%), radial-gradient(ellipse 32% 11% at 85% 51%, var(--light-fog) 0%, transparent 100%);
+  background: radial-gradient(ellipse 12% 2.8% at 18% 38%, var(--paper) 0%, color-mix(in srgb, var(--paper) 85%, transparent) 32%, transparent 100%), radial-gradient(ellipse 20% 2% at 54% 48%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 9% 3% at 86% 34%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 14% 2.2% at 68% 80%, var(--light-fog) 0%, transparent 100%);
   filter: blur(var(--fog-blur-far));
   opacity: var(--fog-opacity-far);
   animation-name: drift-far;
@@ -320,7 +324,8 @@ img {
 }
 
 .fog-middle {
-  background: radial-gradient(ellipse 36% 12% at 52% 55%, var(--paper) 0%, color-mix(in srgb, var(--paper) 75%, transparent) 28%, transparent 100%), radial-gradient(ellipse 34% 10% at 10% 71%, var(--light-fog) 0%, transparent 100%);
+  mask-position: 170px 90px;
+  background: radial-gradient(ellipse 10% 2.5% at 55% 50%, var(--paper) 0%, color-mix(in srgb, var(--paper) 85%, transparent) 25%, transparent 100%), radial-gradient(ellipse 16% 1.8% at 20% 70%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 9% 2.5% at 80% 58%, var(--light-fog) 0%, transparent 100%), radial-gradient(ellipse 12% 2% at 95% 84%, var(--paper) 0%, transparent 100%);
   filter: blur(var(--fog-blur-middle));
   opacity: var(--fog-opacity-middle);
   animation-name: drift-middle;
@@ -329,7 +334,8 @@ img {
 }
 
 .fog-near {
-  background: radial-gradient(ellipse 33% 10% at 74% 72%, var(--paper) 0%, color-mix(in srgb, var(--paper) 70%, transparent) 40%, transparent 100%), radial-gradient(ellipse 29% 9% at 27% 89%, var(--paper) 0%, transparent 100%);
+  mask-position: 370px 20px;
+  background: radial-gradient(ellipse 9% 2% at 74% 72%, var(--paper) 0%, color-mix(in srgb, var(--paper) 90%, transparent) 35%, transparent 100%), radial-gradient(ellipse 12% 1.6% at 35% 88%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 7% 2.6% at 45% 36%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 17% 1.8% at 10% 55%, var(--paper) 0%, transparent 100%);
   filter: blur(var(--fog-blur-near));
   opacity: var(--fog-opacity-near);
   animation-name: drift-near;
@@ -893,9 +899,9 @@ html[data-page-visible="false"] .fog {
 @media (max-width: 760px) {
   :root {
     --gutter: 1.5rem;
-    --fog-blur-far: 40px;
-    --fog-blur-middle: 32px;
-    --fog-blur-near: 24px;
+    --fog-blur-far: 20px;
+    --fog-blur-middle: 18px;
+    --fog-blur-near: 12px;
     --fog-travel: 12%;
   }
 
