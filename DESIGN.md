@@ -1,6 +1,6 @@
 # Shuyuan Hu — a continuous research journal in the mist
 
-The supplied forest photograph is a single fixed background behind the entire page. A lighter fog-white veil lets the forest show through. Three diffuse fog layers drift above that veil within the background stacking context, with wider movement and a gentle opacity cycle. The entire atmosphere remains below the sharp content. Identity, research questions, biography, papers, and projects share this atmosphere. The opening has no full-screen cover or separate About chapter.
+The supplied forest photograph is a single fixed background behind the entire page. A lighter fog-white veil lets the forest show through. Three soft, elongated fog bands drift above that veil within the background stacking context. Defined density gradients, independent directions, and a gentle opacity cycle make their movement visible within a few seconds. The entire atmosphere remains below the sharp content. Identity, research questions, biography, papers, and projects share this atmosphere. The opening has no full-screen cover or separate About chapter.
 
 ## Visual system
 
@@ -8,7 +8,7 @@ The supplied forest photograph is a single fixed background behind the entire pa
 - Typography: locally hosted Newsreader at weight 300 for display type and the Gibson quotation; system PingFang SC at weight 300 and 0.24em letter spacing for the Chinese name; DM Sans for clear body text, questions, navigation, authors, and metadata. No text is blurred.
 - Composition: a compact masthead, quotation with attribution above the name, and introduction beside the portrait. Both research questions appear immediately. Education and prior research continue in the same column.
 - Content: editorial image-and-text rows for five papers and two open-source projects. Selected research contains CTR and the IROS paper; the other three papers follow Open source. Full authors, collaborator links, submission notes, PDFs, abstracts, and project descriptions are preserved.
-- Motion: 18–24s fog drift, a 16px cap on background scroll displacement, and a subtle 1000ms content reveal. Fog continues throughout the page. A fixed pause control stops decorative motion; motion also stops while the document is hidden.
+- Motion: 16–22s fog drift, a 16px cap on background scroll displacement, and a subtle 1000ms content reveal. Fog continues throughout the page. A fixed pause control stops decorative motion; motion also stops while the document is hidden.
 - Accessibility: readable links, explicit keyboard focus, useful figure alternatives, native abstract disclosure controls, and one mobile reading column. Reduced-motion mode retains static mist and shows all content. Project rollout animation opens only through a deliberate link; its in-page preview is static.
 - Texture: extremely fine, static film grain. Research figures use exact lossless WebP, preserving scientific information. Original PNGs and PDFs remain available.
 
