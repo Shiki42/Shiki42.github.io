@@ -41,10 +41,9 @@
   --fog-opacity-far: 0.80;
   --fog-opacity-middle: 0.70;
   --fog-opacity-near: 0.60;
-  --fog-duration-far: 22s;
-  --fog-duration-middle: 18s;
-  --fog-duration-near: 16s;
-  --fog-travel: 18%;
+  --fog-duration-far: 610s;
+  --fog-duration-middle: 590s;
+  --fog-duration-near: 575s;
   --parallax-y: 0px;
   --reveal-duration: 1000ms;
   --reveal-distance: 12px;
@@ -304,43 +303,70 @@ img {
 .fog {
   position: absolute;
   inset: -30%;
+  will-change: transform;
+  animation-name: drift-right;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+.fog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   mask-image: url("../img/fog-density.svg");
   mask-size: 640px 320px;
   mask-repeat: repeat;
   mask-mode: alpha;
-  will-change: transform;
+  transform-origin: center;
+  animation-name: fog-evolve;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
 }
 
 .fog-far {
+  opacity: var(--fog-opacity-far);
+  animation-duration: var(--fog-duration-far);
+  animation-delay: -150s;
+}
+
+.fog-far::before {
   background: radial-gradient(ellipse 12% 2.8% at 18% 38%, var(--paper) 0%, color-mix(in srgb, var(--paper) 85%, transparent) 32%, transparent 100%), radial-gradient(ellipse 20% 2% at 54% 48%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 9% 3% at 86% 34%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 14% 2.2% at 68% 80%, var(--light-fog) 0%, transparent 100%);
   filter: blur(var(--fog-blur-far));
-  opacity: var(--fog-opacity-far);
-  animation-name: drift-far;
-  animation-duration: var(--fog-duration-far);
-  animation-delay: -11s;
+  --density-x: 0px;
+  --density-y: 0px;
+  animation-duration: 110s;
+  animation-delay: -25s;
 }
 
 .fog-middle {
-  mask-position: 170px 90px;
+  opacity: var(--fog-opacity-middle);
+  animation-duration: var(--fog-duration-middle);
+  animation-delay: -300s;
+}
+
+.fog-middle::before {
   background: radial-gradient(ellipse 10% 2.5% at 55% 50%, var(--paper) 0%, color-mix(in srgb, var(--paper) 85%, transparent) 25%, transparent 100%), radial-gradient(ellipse 16% 1.8% at 20% 70%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 9% 2.5% at 80% 58%, var(--light-fog) 0%, transparent 100%), radial-gradient(ellipse 12% 2% at 95% 84%, var(--paper) 0%, transparent 100%);
   filter: blur(var(--fog-blur-middle));
-  opacity: var(--fog-opacity-middle);
-  animation-name: drift-middle;
-  animation-duration: var(--fog-duration-middle);
-  animation-delay: -7s;
+  --density-x: 170px;
+  --density-y: 90px;
+  animation-duration: 145s;
+  animation-delay: -90s;
 }
 
 .fog-near {
-  mask-position: 370px 20px;
+  opacity: var(--fog-opacity-near);
+  animation-duration: var(--fog-duration-near);
+  animation-delay: -420s;
+}
+
+.fog-near::before {
   background: radial-gradient(ellipse 9% 2% at 74% 72%, var(--paper) 0%, color-mix(in srgb, var(--paper) 90%, transparent) 35%, transparent 100%), radial-gradient(ellipse 12% 1.6% at 35% 88%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 7% 2.6% at 45% 36%, var(--paper) 0%, transparent 100%), radial-gradient(ellipse 17% 1.8% at 10% 55%, var(--paper) 0%, transparent 100%);
   filter: blur(var(--fog-blur-near));
-  opacity: var(--fog-opacity-near);
-  animation-name: drift-near;
-  animation-duration: var(--fog-duration-near);
-  animation-delay: -17s;
+  --density-x: 370px;
+  --density-y: 20px;
+  animation-duration: 175s;
+  animation-delay: -140s;
 }
 
 .introduction {
@@ -860,23 +886,38 @@ cite {
 }
 
 html[data-motion="paused"] .fog,
-html[data-page-visible="false"] .fog {
+html[data-motion="paused"] .fog::before,
+html[data-page-visible="false"] .fog,
+html[data-page-visible="false"] .fog::before {
   animation-play-state: paused;
 }
 
-@keyframes drift-far {
-  from { transform: translate3d(calc(var(--fog-travel) * -1), -2%, 0); }
-  to { transform: translate3d(var(--fog-travel), 2.5%, 0); opacity: calc(var(--fog-opacity-far) * 0.85); }
+@keyframes drift-right {
+  from { transform: translate3d(-100%, 0, 0); }
+  to { transform: translate3d(100%, 0, 0); }
 }
 
-@keyframes drift-middle {
-  from { transform: translate3d(calc(var(--fog-travel) * 0.85), 2%, 0); }
-  to { transform: translate3d(calc(var(--fog-travel) * -0.85), -2.5%, 0); opacity: calc(var(--fog-opacity-middle) * 0.72); }
-}
-
-@keyframes drift-near {
-  from { transform: translate3d(calc(var(--fog-travel) * -0.65), 3%, 0); }
-  to { transform: translate3d(calc(var(--fog-travel) * 0.9), -2%, 0); opacity: calc(var(--fog-opacity-near) * 0.8); }
+@keyframes fog-evolve {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(0.88, 0.8) skewX(-4deg);
+    mask-position: var(--density-x) var(--density-y);
+  }
+  22% {
+    opacity: 0.55;
+    transform: scale(0.94, 1.02) skewX(2deg);
+    mask-position: calc(var(--density-x) + 20px) calc(var(--density-y) - 8px);
+  }
+  52% {
+    opacity: 1;
+    transform: scale(1.04, 1.12) skewX(5deg);
+    mask-position: calc(var(--density-x) + 48px) calc(var(--density-y) - 16px);
+  }
+  76% {
+    opacity: 0.3;
+    transform: scale(1.13, 0.92) skewX(-2deg);
+    mask-position: calc(var(--density-x) + 68px) calc(var(--density-y) + 12px);
+  }
 }
 
 @media (max-width: 1000px) {
@@ -902,7 +943,9 @@ html[data-page-visible="false"] .fog {
     --fog-blur-far: 20px;
     --fog-blur-middle: 18px;
     --fog-blur-near: 12px;
-    --fog-travel: 12%;
+    --fog-duration-far: 915s;
+    --fog-duration-middle: 885s;
+    --fog-duration-near: 862.5s;
   }
 
   .site-header {
@@ -1064,7 +1107,8 @@ html[data-page-visible="false"] .fog {
     scroll-behavior: auto;
   }
 
-  .fog {
+  .fog,
+  .fog::before {
     animation: none;
     will-change: auto;
   }
