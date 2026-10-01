@@ -38,13 +38,13 @@
   --fog-blur-far: 64px;
   --fog-blur-middle: 48px;
   --fog-blur-near: 36px;
-  --fog-opacity-far: 0.18;
-  --fog-opacity-middle: 0.14;
-  --fog-opacity-near: 0.12;
-  --fog-duration-far: 30s;
-  --fog-duration-middle: 27s;
-  --fog-duration-near: 24s;
-  --fog-travel: 3%;
+  --fog-opacity-far: 0.24;
+  --fog-opacity-middle: 0.20;
+  --fog-opacity-near: 0.16;
+  --fog-duration-far: 24s;
+  --fog-duration-middle: 21s;
+  --fog-duration-near: 18s;
+  --fog-travel: 7%;
   --parallax-y: 0px;
   --reveal-duration: 1000ms;
   --reveal-distance: 12px;
@@ -278,6 +278,10 @@ img {
   overflow: hidden;
 }
 
+.landscape {
+  z-index: 0;
+}
+
 .landscape img {
   width: 100%;
   height: 100%;
@@ -288,10 +292,12 @@ img {
 }
 
 .light-diffusion {
-  background: linear-gradient(90deg, color-mix(in srgb, var(--paper) 91%, transparent), color-mix(in srgb, var(--paper) 88%, transparent) 62%, color-mix(in srgb, var(--paper) 85%, transparent)), linear-gradient(180deg, color-mix(in srgb, var(--paper) 12%, transparent), transparent 55%);
+  z-index: 1;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--paper) 82%, transparent), color-mix(in srgb, var(--paper) 78%, transparent) 62%, color-mix(in srgb, var(--paper) 73%, transparent)), linear-gradient(180deg, color-mix(in srgb, var(--paper) 12%, transparent), transparent 55%);
 }
 
 .fog-field {
+  z-index: 2;
   transform: translate3d(0, calc(var(--parallax-y) * -0.35), 0);
 }
 
@@ -853,18 +859,18 @@ html[data-page-visible="false"] .fog {
 }
 
 @keyframes drift-far {
-  from { transform: translate3d(calc(var(--fog-travel) * -1), -1%, 0); }
-  to { transform: translate3d(var(--fog-travel), 1.5%, 0); }
+  from { transform: translate3d(calc(var(--fog-travel) * -1), -2%, 0); }
+  to { transform: translate3d(var(--fog-travel), 2.5%, 0); opacity: calc(var(--fog-opacity-far) * 0.85); }
 }
 
 @keyframes drift-middle {
-  from { transform: translate3d(2%, 1%, 0); }
-  to { transform: translate3d(-2%, -1%, 0); opacity: calc(var(--fog-opacity-middle) * 0.9); }
+  from { transform: translate3d(calc(var(--fog-travel) * 0.85), 2%, 0); }
+  to { transform: translate3d(calc(var(--fog-travel) * -0.85), -2.5%, 0); opacity: calc(var(--fog-opacity-middle) * 0.72); }
 }
 
 @keyframes drift-near {
-  from { transform: translate3d(-1.5%, 1.5%, 0); }
-  to { transform: translate3d(2.5%, -1%, 0); }
+  from { transform: translate3d(calc(var(--fog-travel) * -0.65), 3%, 0); }
+  to { transform: translate3d(calc(var(--fog-travel) * 0.9), -2%, 0); opacity: calc(var(--fog-opacity-near) * 0.8); }
 }
 
 @media (max-width: 1000px) {
@@ -890,7 +896,7 @@ html[data-page-visible="false"] .fog {
     --fog-blur-far: 40px;
     --fog-blur-middle: 32px;
     --fog-blur-near: 24px;
-    --fog-travel: 2%;
+    --fog-travel: 4%;
   }
 
   .site-header {
