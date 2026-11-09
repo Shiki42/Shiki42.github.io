@@ -587,6 +587,19 @@ img {
   font-size: 1rem;
 }
 
+.portrait-caption {
+  font-size: 0.875rem;
+}
+
+.portrait-caption-personal,
+.portrait:has(.personal-interests[open]) .portrait-caption-primary {
+  display: none;
+}
+
+.portrait:has(.personal-interests[open]) .portrait-caption-personal {
+  display: block;
+}
+
 .personal-interests summary {
   width: fit-content;
   min-height: 44px;
